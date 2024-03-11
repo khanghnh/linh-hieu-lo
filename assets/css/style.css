@@ -78,9 +78,7 @@ input[type=text] {
   border: 0;
   transition: 0.2s;
 }
-.container .btn-field .btn:hover {
-  background-color: hsl(0, 0%, 8%);
-}
+
 .container .btn-field .btn:active {
   background-color: hsl(0, 0%, 86%);
 }
