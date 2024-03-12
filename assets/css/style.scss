@@ -1,0 +1,90 @@
+@import "appearance";
+.container {
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .title {
+    justify-self: center;
+    display: flex;
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    color: black;
+  }
+  .title1 {
+    margin: 2vh 0 0 0;
+  }
+  .title2 {
+    font-size: 35px;
+    margin: 0 0 3vh 0;
+    font-weight: 700;
+    color: #a200b8;
+  }
+  .box {
+    display: block;
+    border: 2px solid black;
+    border-radius: 13px;
+    padding: 6px;
+    margin: 0 2vh 0 2vh;
+    p {
+      font-family: "Roboto Mono", monospace;
+      font-size: 12.5px;
+      line-height: 22px;
+    }
+  }
+
+  .input-field {
+    margin-top: 3vh;
+    .input-btn {
+      width: 40px;
+      height: 60px;
+      margin: 0 2px 0 2px;
+      font-family: "Poppins";
+      background-color: transparent;
+      border: 1px solid $light-grey;
+      border-radius: 7px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: $off-black;
+      transition: 0.2s;
+    }
+  }
+  .btn-field {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    .btn {
+      color: white;
+      color: rgb(216, 43, 43);
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      height: inherit;
+      grid-template-columns: 60px;
+      grid-template-rows: 60px;
+      width: 60px;
+      border: 0;
+      transition: 0.2s;
+    }
+    @include btn;
+    .check {
+      border-radius: 50% 0 0 50%;
+      background-color: rgb(83, 141, 83);
+    }
+    .reset {
+      border-radius: 0 50% 50% 0;
+      background-color: rgb(197, 141, 38);
+    }
+  }
+  .note {
+    margin-top: 3vh;
+    font-family: "Roboto Mono", monospace;
+    color: rgb(10, 10, 10);
+    padding: 0 3vh 0 3vh;
+    font-size: 0.8rem;
+    width: auto;
+  }
+}
