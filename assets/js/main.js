@@ -33,4 +33,8 @@ function reset() {
   document.getElementById("5").value = "";
   document.getElementById("6").value = "";
   document.getElementById("7").value = "";
+  for (let a in [0, 1, 2, 3, 4, 5, 6]) {
+    document.getElementsByClassName("input-btn")[a].style.color =
+      "hsl(0, 0%, 8%)";
+  }
 }
