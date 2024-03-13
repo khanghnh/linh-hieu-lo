@@ -36,6 +36,9 @@ function check() {
       if (document.getElementsByClassName("input-btn")[a].value == "") {
         document.getElementsByClassName("input-btn")[a].style.background =
           "rgb(255, 174, 0)";
+      } else {
+        document.getElementsByClassName("input-btn")[a].style.background =
+          "transparent";
       }
     }
   } else {
