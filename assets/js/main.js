@@ -1,40 +1,66 @@
+function MoveCursor(FromTextBox, ToTextBox) {
+  let length = FromTextBox.value.length;
+  let maxLength = FromTextBox.getAttribute("MaxLength");
+  if (length == maxLength) {
+    document.getElementById(ToTextBox).focus();
+  }
+}
+
 function check() {
-  let n1 = document.getElementById("1").value;
-  let n2 = document.getElementById("2").value;
-  let n3 = document.getElementById("3").value;
-  let n4 = document.getElementById("4").value;
-  let n5 = document.getElementById("5").value;
-  let n6 = document.getElementById("6").value;
-  let n7 = document.getElementById("7").value;
-  let n = n1 + n2 + n3 + n4 + n5 + n6 + n7;
+  let n =
+    document.getElementById("inp-1").value +
+    document.getElementById("inp-2").value +
+    document.getElementById("inp-3").value +
+    document.getElementById("inp-4").value +
+    document.getElementById("inp-5").value +
+    document.getElementById("inp-6").value +
+    document.getElementById("inp-7").value;
+  n = n.toUpperCase();
+
   if (n == "BLDZAOE") {
     for (let a in [0, 1, 2, 3, 4, 5, 6]) {
-      document.getElementsByClassName("input-btn")[a].style.color =
+      document.getElementsByClassName("input-btn")[a].style.background =
         "rgb(9, 179, 9)";
+      document.getElementsByClassName("input-btn")[a].style.color =
+        "rgb(255, 255, 255)";
     }
   } else if (n == "270426T") {
     for (let a in [0, 1, 2, 3, 4, 5, 6]) {
-      document.getElementsByClassName("input-btn")[a].style.color =
+      document.getElementsByClassName("input-btn")[a].style.background =
         "rgb(9, 179, 9)";
+      document.getElementsByClassName("input-btn")[a].style.color =
+        "rgb(255, 255, 255)";
+    }
+  } else if (n.length != 7) {
+    for (let a in [0, 1, 2, 3, 4, 5, 6]) {
+      if (document.getElementsByClassName("input-btn")[a].value == "") {
+        document.getElementsByClassName("input-btn")[a].style.background =
+          "rgb(255, 174, 0)";
+      }
     }
   } else {
     for (let a in [0, 1, 2, 3, 4, 5, 6]) {
-      document.getElementsByClassName("input-btn")[a].style.color =
+      document.getElementsByClassName("input-btn")[a].style.background =
         "rgb(216, 43, 43)";
+      document.getElementsByClassName("input-btn")[a].style.color =
+        "rgb(255, 255, 255)";
     }
   }
 }
 
 function reset() {
-  document.getElementById("1").value = "";
-  document.getElementById("2").value = "";
-  document.getElementById("3").value = "";
-  document.getElementById("4").value = "";
-  document.getElementById("5").value = "";
-  document.getElementById("6").value = "";
-  document.getElementById("7").value = "";
+  document.getElementById("inp-1").value = "";
+  document.getElementById("inp-2").value = "";
+  document.getElementById("inp-3").value = "";
+  document.getElementById("inp-4").value = "";
+  document.getElementById("inp-5").value = "";
+  document.getElementById("inp-6").value = "";
+  document.getElementById("inp-7").value = "";
   for (let a in [0, 1, 2, 3, 4, 5, 6]) {
     document.getElementsByClassName("input-btn")[a].style.color =
       "hsl(0, 0%, 8%)";
+    document.getElementsByClassName("input-btn")[a].style.background =
+      "transparent";
+    document.getElementById("inp-1").focus();
   }
 }

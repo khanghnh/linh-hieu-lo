@@ -1,6 +1,7 @@
 @import "appearance";
 .container {
   color: black;
+  // color:rgb(255, 174, 0);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,11 +44,12 @@
       margin: 0 2px 0 2px;
       font-family: "Poppins";
       background-color: transparent;
-      border: 1px solid $light-grey;
+      border: 1.5px solid $light-grey;
       border-radius: 7px;
       text-align: center;
       font-size: 32px;
       font-weight: 700;
+      text-transform: uppercase;
       color: $off-black;
       transition: 0.2s;
     }
@@ -58,7 +60,6 @@
     flex-direction: row;
     .btn {
       color: white;
-      color: rgb(216, 43, 43);
       display: grid;
       align-items: center;
       justify-items: center;
@@ -84,7 +85,7 @@
     font-family: "Roboto Mono", monospace;
     color: rgb(10, 10, 10);
     padding: 0 3vh 0 3vh;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     width: auto;
   }
 }

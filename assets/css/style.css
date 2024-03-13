@@ -53,11 +53,12 @@ input[type=text] {
   margin: 0 2px 0 2px;
   font-family: "Poppins";
   background-color: transparent;
-  border: 1px solid hsl(0, 0%, 86%);
+  border: 1.5px solid hsl(0, 0%, 86%);
   border-radius: 7px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
+  text-transform: uppercase;
   color: hsl(0, 0%, 8%);
   transition: 0.2s;
 }
@@ -68,7 +69,6 @@ input[type=text] {
 }
 .container .btn-field .btn {
   color: white;
-  color: rgb(216, 43, 43);
   display: grid;
   align-items: center;
   justify-items: center;
@@ -95,6 +95,6 @@ input[type=text] {
   font-family: "Roboto Mono", monospace;
   color: rgb(10, 10, 10);
   padding: 0 3vh 0 3vh;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   width: auto;
 }/*# sourceMappingURL=style.css.map */
