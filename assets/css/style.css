@@ -33,7 +33,6 @@ input[type=text] {
   color: #a200b8;
 }
 .container .box {
-  display: block;
   border: 2px solid black;
   border-radius: 13px;
   padding: 6px;
@@ -89,6 +88,12 @@ input[type=text] {
 .container .btn-field .reset {
   border-radius: 0 50% 50% 0;
   background-color: rgb(197, 141, 38);
+}
+.container .btn-field .gift {
+  display: none;
+  background-color: green;
+  margin-left: 15px;
+  border-radius: 20%;
 }
 .container .note {
   margin-top: 3vh;

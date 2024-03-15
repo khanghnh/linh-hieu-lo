@@ -31,6 +31,9 @@ function check() {
       document.getElementsByClassName("input-btn")[a].style.color =
         "rgb(255, 255, 255)";
     }
+    document.getElementById("text").style.display = "none";
+    document.getElementById("jackpot").style.display = "flex";
+    document.getElementById("giftid").style.display = "inherit";
   } else if (n.length != 7) {
     for (let a in [0, 1, 2, 3, 4, 5, 6]) {
       if (document.getElementsByClassName("input-btn")[a].value == "") {
@@ -66,4 +69,7 @@ function reset() {
       "transparent";
     document.getElementById("inp-1").focus();
   }
+  document.getElementById("text").style.display = "flex";
+  document.getElementById("jackpot").style.display = "none";
+  document.getElementById("giftid").style.display = "none";
 }
