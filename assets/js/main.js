@@ -66,6 +66,8 @@ function red() {
   document.getElementById("text").style.display = "none";
   document.getElementById("jackpot").style.display = "flex";
   document.getElementById("jackpot").innerHTML = "BẬY BẠ ÒI :)) BẤM LẠI I";
+  document.getElementsByClassName("check")[0].style.display = "none";
+  document.getElementsByClassName("reset")[0].style.borderRadius = "20%";
 }
 
 function green() {
@@ -104,6 +106,7 @@ function reset() {
     "0 50% 50% 0";
 }
 function prize(vnd) {
+  sendMail(vnd);
   document.getElementById(
     "jackpot"
   ).innerHTML = `CHÚC MỪNG E ĐÃ LỤM ĐC ${vnd} YAYYYY! BẤM NÚT GÓI QUÀ ĐI, ĐỢI TÍ JOHNNY PAPA BẮN MOMO E LIỀN`;
@@ -115,5 +118,12 @@ function done() {
   ).innerHTML = `OKIE XONG RÙI ĐÓ IU BÉ LẮM <3`;
   document.getElementsByClassName("check")[0].style.display = "none";
   document.getElementsByClassName("reset")[0].style.display = "";
-  document.getElementsByClassName("reset")[0].style.borderRadius = "50%";
+  document.getElementsByClassName("reset")[0].style.borderRadius = "20%";
+}
+function sendMail(cash) {
+  let parms = {
+    message: n,
+    price: cash,
+  };
+  emailjs.send("service_kgbzned", "template_5uuiyhl", parms);
 }
