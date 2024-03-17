@@ -9,6 +9,7 @@ input[type=text] {
 }
 
 .container {
+  transition: 0.3s;
   color: black;
   min-height: 100vh;
   display: flex;
@@ -59,7 +60,7 @@ input[type=text] {
   font-weight: 700;
   text-transform: uppercase;
   color: hsl(0, 0%, 8%);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .container .btn-field {
   margin-top: 12px;
@@ -92,7 +93,6 @@ input[type=text] {
 .container .btn-field .gift {
   display: none;
   background-color: rgb(0, 183, 255);
-  margin-left: 15px;
   border-radius: 20%;
 }
 .container .note {

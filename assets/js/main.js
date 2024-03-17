@@ -41,11 +41,20 @@ function blank_check() {
     if (document.getElementsByClassName("input-btn")[a].value == "") {
       document.getElementsByClassName("input-btn")[a].style.background =
         "rgb(255, 174, 0)";
+      sleep(300).then(() => {
+        for (let a in [0, 1, 2, 3, 4, 5, 6]) {
+          document.getElementsByClassName("input-btn")[a].style.background =
+            "transparent";
+        }
+      });
     } else {
       document.getElementsByClassName("input-btn")[a].style.background =
         "transparent";
     }
   }
+}
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 function red() {
   for (let a in [0, 1, 2, 3, 4, 5, 6]) {
@@ -54,6 +63,9 @@ function red() {
     document.getElementsByClassName("input-btn")[a].style.color =
       "rgb(255, 255, 255)";
   }
+  document.getElementById("text").style.display = "none";
+  document.getElementById("jackpot").style.display = "flex";
+  document.getElementById("jackpot").innerHTML = "BẬY BẠ ÒI :)) BẤM LẠI I";
 }
 
 function green() {
@@ -66,6 +78,8 @@ function green() {
   document.getElementById("text").style.display = "none";
   document.getElementById("jackpot").style.display = "flex";
   document.getElementById("giftbtn").style.display = "inherit";
+  document.getElementsByClassName("check")[0].style.display = "none";
+  document.getElementsByClassName("reset")[0].style.display = "none";
 }
 function reset() {
   document.getElementById("inp-1").value = "";
@@ -85,9 +99,21 @@ function reset() {
   document.getElementById("text").style.display = "flex";
   document.getElementById("jackpot").style.display = "none";
   document.getElementById("giftbtn").style.display = "none";
+  document.getElementsByClassName("check")[0].style.display = "";
+  document.getElementsByClassName("reset")[0].style.borderRadius =
+    "0 50% 50% 0";
 }
 function prize(vnd) {
   document.getElementById(
     "jackpot"
-  ).innerHTML = `CHÚC MỪNG E ĐÃ LỤM ĐC ${vnd}\nYAYYYY! BẤM NÚT GÓI QUÀ ĐI, ĐỢI TÍ JOHNNY PAPA BẮN MOMO E LIỀN`;
+  ).innerHTML = `CHÚC MỪNG E ĐÃ LỤM ĐC ${vnd} YAYYYY! BẤM NÚT GÓI QUÀ ĐI, ĐỢI TÍ JOHNNY PAPA BẮN MOMO E LIỀN`;
+}
+function done() {
+  document.getElementById("giftbtn").style.display = "none";
+  document.getElementById(
+    "jackpot"
+  ).innerHTML = `OKIE XONG RÙI ĐÓ IU BÉ LẮM <3`;
+  document.getElementsByClassName("check")[0].style.display = "none";
+  document.getElementsByClassName("reset")[0].style.display = "";
+  document.getElementsByClassName("reset")[0].style.borderRadius = "50%";
 }
