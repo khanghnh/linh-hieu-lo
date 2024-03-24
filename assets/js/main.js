@@ -4,16 +4,16 @@ function check() {
     blank_check();
   } else if (n == "BLDZAOE") {
     green();
-    prize("100K");
+    prize("1 HỘP PHẤN MÁ HỒNG JUDYDOLL");
   } else if (n == "2246155") {
     green();
-    prize("50K");
+    prize("100K");
   } else if (n == "078A6HG") {
     green();
-    prize("50K");
+    prize("VOUCHER 1 TUẦN ĐƯỢC PHANG ANH GUILT FREE");
   } else if (n == "270426T") {
     green();
-    prize("20K");
+    prize("1 LY NƯỚC TỰ CHỌN");
   } else {
     red();
   }
@@ -109,7 +109,7 @@ function prize(vnd) {
   sendMail(vnd);
   document.getElementById(
     "jackpot"
-  ).innerHTML = `CHÚC MỪNG E ĐÃ LỤM ĐC ${vnd} YAYYYY! BẤM NÚT GÓI QUÀ ĐI, ĐỢI TÍ JOHNNY PAPA BẮN MOMO E LIỀN`;
+  ).innerHTML = `CHÚC MỪNG E ĐÃ LỤM ĐC ${vnd} YAYYYY! BẤM NÚT GÓI QUÀ ĐI, JOHNNY PAPA BẮT ĐC TÍN HIỆU LIỀN `;
 }
 function done() {
   document.getElementById("giftbtn").style.display = "none";
