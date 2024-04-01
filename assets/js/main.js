@@ -4,7 +4,7 @@ function check() {
     blank_check();
   } else if (n == "BLDZAOE") {
     green();
-    prize("1 HỘP PHẤN MÁ HỒNG JUDYDOLL");
+    prize("1 CÂY SON TỰ CHỌN");
   } else if (n == "2246155") {
     green();
     prize("100K");
