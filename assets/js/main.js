@@ -4,16 +4,16 @@ function check() {
     blank_check();
   } else if (n == "BLDZAOE") {
     green();
-    prize("1 CÂY SON TỰ CHỌN");
+    prize("1 CÂY SON");
   } else if (n == "2246155") {
     green();
     prize("100K");
   } else if (n == "078A6HG") {
     green();
-    prize("VOUCHER 1 TUẦN ĐƯỢC PHANG ANH GUILT FREE");
+    prize("BAO ĂN 4P");
   } else if (n == "270426T") {
     green();
-    prize("1 LY NƯỚC TỰ CHỌN");
+    prize("1 LY MATCHA");
   } else {
     red();
   }
